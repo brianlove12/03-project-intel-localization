@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intel: Sustainability Through The Ages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main></main>
+    <!-- Header / Hero Section -->
+    <header>
+      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+      <h1>SUSTAINABILITY THROUGH THE AGES</h1>
+      <!-- Decorative divider using a semantic <hr> element -->
+      <hr class="header-divider" />
+      <p>
+        Explore Intel's journey through time, discovering how our commitment
+        to innovation has shaped a more sustainable future for technology 
+        and our planet.
+      </p>
+    </header>
+
+    <!-- Timeline Section: Intel's Sustainability Goals -->
+    <section class="timeline-section">
+      <h2>Intel's Sustainability Timeline</h2>
+      <section class="timeline">
+        <!-- Timeline Item 1968 -->
+        <article class="timeline-item timeline-item-1968" tabindex="0">
+          <div class="timeline-1968-bg"></div>
+          <span class="timeline-year">1968</span>
+          <section class="timeline-content reveal-on-hover">
+            <h3>Intel Founded</h3>
+            <p>Intel Corporation is founded by Robert Noyce and Gordon Moore, marking the beginning of decades of innovation.</p>
+            <div class="fun-fact" hidden>Fun Fact: The name "Intel" comes from "Integrated Electronics"!</div>
+          </section>
+        </article>
+        <!-- Timeline Item 1971 -->
+        <article class="timeline-item timeline-item-1971" tabindex="0">
+          <div class="timeline-1971-bg"></div>
+          <span class="timeline-year">1971</span>
+          <section class="timeline-content reveal-on-hover">
+            <h3>First Microprocessor</h3>
+            <p>Intel introduces the 4004, the world's first commercial microprocessor, launching the microprocessor revolution.</p>
+            <div class="fun-fact" hidden>Fun Fact: The 4004 had just 2,300 transistors—modern chips have billions!</div>
+          </section>
+        </article>
+        <!-- Timeline Item 1978 -->
+        <article class="timeline-item timeline-item-1978" tabindex="0">
+          <div class="timeline-1978-bg"></div>
+          <span class="timeline-year">1978</span>
+          <section class="timeline-content reveal-on-hover">
+            <h3>8086 Processor</h3>
+            <p>Intel launches the 8086 processor, establishing the x86 architecture that powers countless computers today.</p>
+            <div class="fun-fact" hidden>Fun Fact: The x86 architecture is still used in most PCs today!</div>
+          </section>
+        </article>
+        <!-- Timeline Item 1985 -->
+        <article class="timeline-item timeline-item-1985" tabindex="0">
+          <div class="timeline-1985-bg"></div>
+          <span class="timeline-year">1985</span>
+          <section class="timeline-content reveal-on-hover">
+            <h3>386 Microprocessor</h3>
+            <p>Intel introduces the 386 microprocessor, bringing 32-bit computing and multitasking to personal computers.</p>
+            <div class="fun-fact" hidden>Fun Fact: The 386 was the first Intel chip to allow running multiple programs at once!</div>
+          </section>
+        </article>
+        <!-- Timeline Item 2022 -->
+        <article class="timeline-item timeline-item-2022" tabindex="0">
+          <div class="timeline-2022-bg"></div>
+          <span class="timeline-year">2022</span>
+          <section class="timeline-content reveal-on-hover">
+            <h3>100% Renewable Energy</h3>
+            <p>Intel achieved 100% renewable electricity use in its global operations.</p>
+            <div class="fun-fact" hidden>Fun Fact: Intel is one of the largest voluntary purchasers of green power in the U.S.!</div>
+          </section>
+        </article>
+        <!-- Timeline Item 2030 -->
+        <article class="timeline-item timeline-item-2030" tabindex="0">
+          <div class="timeline-2030-bg"></div>
+          <span class="timeline-year">2030</span>
+          <section class="timeline-content reveal-on-hover">
+            <h3>Net Positive Water</h3>
+            <p>Intel aims to achieve net positive water use by conserving more water than it consumes.</p>
+            <div class="fun-fact" hidden>Fun Fact: Intel restores billions of gallons of water to local watersheds each year!</div>
+          </section>
+        </article>
+        <!-- Timeline Item 2040 -->
+        <article class="timeline-item timeline-item-2040" tabindex="0">
+          <div class="timeline-2040-bg"></div>
+          <span class="timeline-year">2040</span>
+          <section class="timeline-content reveal-on-hover">
+            <h3>Net Zero Greenhouse Gas Emissions</h3>
+            <p>Intel is committed to reaching net zero greenhouse gas emissions in its global operations.</p>
+            <div class="fun-fact" hidden>Fun Fact: Intel aims to achieve net-zero greenhouse gas emissions by 2040!</div>
+          </section>
+        </article>
+      </section>
+      <p class="timeline-instructions">Scroll to view timeline | Hover over cards to learn more!</p>
+    </section>
+  </main>
+</main>
+<script>
+// Show fun fact after 2 seconds of hover/focus
+document.querySelectorAll('.timeline-item').forEach(function(card) {
+  let timer;
+  const funFact = card.querySelector('.fun-fact');
+  card.addEventListener('mouseenter', function() {
+    timer = setTimeout(function() {
+      if (funFact) funFact.hidden = false;
+    }, 2000);
+  });
+  card.addEventListener('mouseleave', function() {
+    clearTimeout(timer);
+    if (funFact) funFact.hidden = true;
+  });
+  card.addEventListener('focusin', function() {
+    timer = setTimeout(function() {
+      if (funFact) funFact.hidden = false;
+    }, 2000);
+  });
+  card.addEventListener('focusout', function() {
+    clearTimeout(timer);
+    if (funFact) funFact.hidden = true;
+  });
+});
+</script>
+</body>
+</html>

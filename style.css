@@ -1,0 +1,494 @@
+.fun-fact {
+	margin-top: 1rem;
+	padding: 0.7rem 1rem;
+	background: #c0c1c4;
+	color: #0b0c0e;
+	border-radius: 10px;
+	font-size: 0.98rem;
+	box-shadow: 0 2px 8px rgba(50,102,189,0.10);
+	transition: opacity 0.5s;
+	opacity: 1;
+}
+.timeline-item-1968 .timeline-year {
+	color: #fff !important;
+}
+.timeline-item:hover .timeline-1968-bg,
+.timeline-item:hover .timeline-1971-bg,
+.timeline-item:hover .timeline-1978-bg,
+.timeline-item:hover .timeline-1985-bg,
+.timeline-item:hover .timeline-2022-bg,
+.timeline-item:hover .timeline-2030-bg,
+.timeline-item:hover .timeline-2040-bg {
+	opacity: 0.5;
+	transition: opacity 0.5s;
+}
+
+.timeline-1968-bg,
+.timeline-1971-bg,
+.timeline-1978-bg,
+.timeline-1985-bg,
+.timeline-2022-bg,
+.timeline-2030-bg,
+.timeline-2040-bg {
+	transition: opacity 0.5s;
+}
+/* Thin light blue divider line in header */
+.header-divider {
+	width: 25%;
+	height: 2px;
+	background: linear-gradient(90deg, #6ab2ec 0%, #b3dafe 100%);
+	margin: 0.7rem 0 0.7rem 0;
+	border-radius: 1px;
+	box-shadow: 0 1px 4px rgba(110,198,247,0.10);
+}
+/* Intel-branded background for the whole page */
+body {
+	min-height: 100vh;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(120deg, #e3f0fc 0%, #f5f7fa 100%);
+	overflow-x: hidden; /* Prevent page from scrolling horizontally */
+}
+
+/* Header section styling - full width, square on desktop */
+header {
+	background: linear-gradient(90deg, #2565c5ea 0%, #063066 100%);
+	box-shadow: 0 2px 12px rgba(0,113,197,0.07);
+	margin: 0;
+	border-radius: 0;
+	width: 100vw;
+	height: 340px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	text-align: center;
+	gap: 0.5rem;
+}
+
+
+/* Intel logo sizing and placement */
+header img {
+	width: 200px;
+	height: auto;
+	margin-bottom: 1.2rem;
+	display: block;
+}
+
+/* Main headline styling */
+header h1 {
+	font-size: 2.2rem;
+	color: white;
+	margin: 0 0 0.7rem 0;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-shadow: 0 2px 8px rgba(0,113,197,0.08);
+}
+
+/* Subheading / description styling */
+header p {
+	font-size: 1.1rem;
+	color: white;
+	margin: 0 0 0.5rem 0;
+	line-height: 1.6;
+	max-width: 480px;
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	header {
+		width: 100vw;
+		height: 60vw;
+		min-height: 180px;
+		max-height: 340px;
+		padding: 0;
+	}
+	header div {
+		padding: 0 0.5rem;
+	}
+	header img {
+		width: 200px;
+	}
+	header h1 {
+		font-size: 2.4rem;
+	}
+	header p {
+		font-size: 2rem;
+	}
+}
+/* Timeline Section Styles */
+.timeline-section {
+		padding: 1.5rem 1.5vw 1.5rem 1.5vw;
+	background: #e3e4e6d7;
+	text-align: center;
+	margin: 0;
+	overflow: visible;
+}
+
+.timeline-section h2 {
+		color: #0071c5;
+		margin-bottom: 2.5rem;
+		padding-bottom: 0;
+}
+
+/* Timeline container uses flexbox and scrolls horizontally on large screens */
+.timeline {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	overflow-x: scroll; /* Allow timeline to scroll horizontally */
+	overflow-y: visible;
+	padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+	justify-content: flex-start;
+	align-items: stretch;
+		scroll-snap-type: x proximity;
+		scroll-padding-left: 2vw;
+		scroll-behavior: smooth;
+	max-width: 100vw; /* Ensure timeline does not exceed viewport width */
+	box-sizing: border-box;
+}
+
+/* Each timeline item snaps into place for smooth scrolling */
+.timeline-item {
+			scroll-snap-align: center;
+			flex: 0 0 260px;
+			position: relative;
+		}
+
+		/* Ensure semantic elements are styled the same as divs */
+		article.timeline-item {
+			background: #f5faff;
+			border-radius: 16px;
+			box-shadow: 0 4px 16px rgba(50,102,189,0.10), 0 1.5px 6px rgba(11,105,228,0.07);
+			border: 2px solid #b3dafe;
+			padding: 2rem 1.5rem 1.7rem 1.5rem;
+			width: 260px;
+			margin: 0.7rem 0;
+			transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		section.timeline-content.reveal-on-hover {
+			opacity: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: opacity 1.5s ease, max-height 1.5s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			pointer-events: none;
+		}
+		article.timeline-item:hover section.reveal-on-hover,
+		article.timeline-item:focus-within section.reveal-on-hover {
+			opacity: 1;
+			max-height: 300px;
+			pointer-events: auto;
+		}
+
+		span.timeline-year {
+			background: linear-gradient(135deg, #2565c5 60%, #6ab2ec 100%);
+			color: #fff;
+			font-weight: bold;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.3rem;
+			margin-bottom: 1.1rem;
+			box-shadow: 0 2px 8px rgba(50,102,189,0.13);
+			border: 2.5px solid #b3dafe;
+}
+
+	/* ...existing code... */
+	
+
+/* Each timeline item styled with Intel colors and spacing */
+.timeline-item {
+	background: #f5faff;
+	border-radius: 16px;
+	box-shadow: 0 4px 16px rgba(50,102,189,0.10), 0 1.5px 6px rgba(11,105,228,0.07);
+	border: 2px solid #b3dafe;
+	padding: 2rem 1.5rem 1.7rem 1.5rem;
+	width: 260px;
+	margin: 0.7rem 0;
+	transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #000;
+}
+
+/* Hover effect for timeline cards */
+.timeline-item {
+	transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.timeline-item {
+	transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.timeline-item:hover, .timeline-item:focus-within {
+	transform: translateY(-8px) scale(1.08);
+	box-shadow: 0 12px 32px rgba(11,105,228,0.18);
+	border-color: #2565c5;
+	z-index: 2;
+}
+
+/* Year circle with Intel blue */
+.timeline-year {
+		background: linear-gradient(135deg, #2565c5 60%, #6ab2ec 100%);
+		color: #fff;
+		font-weight: bold;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.3rem;
+		margin-bottom: 1.1rem;
+		box-shadow: 0 2px 8px rgba(50,102,189,0.13);
+		border: 2.5px solid #b3dafe;
+}
+
+
+/* Card title */
+.timeline-content h3 {
+	margin: 0.5rem 0 0.3rem 0;
+	color: #000;
+	font-size: 1.18rem;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}
+
+
+/* Card description */
+.timeline-content p {
+		color: #000;
+		font-size: 1rem;
+		margin: 0.2rem 0 0 0;
+		line-height: 1.6;
+	}
+
+	/* Hide details by default, show on hover for interactivity with transition */
+	.reveal-on-hover {
+			opacity: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: opacity 1.5s ease, max-height 1s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			pointer-events: none;
+	}
+		.timeline-item:hover .reveal-on-hover,
+		.timeline-item:focus-within .reveal-on-hover {
+			opacity: 1;
+			max-height: 300px;
+			pointer-events: auto;
+		}
+
+
+/* Instructions text */
+.timeline-instructions {
+	margin-top: 2rem;
+	color: #888;
+	font-size: 1rem;
+}
+
+/* Responsive design for mobile: stack vertically */
+@media (max-width: 800px) {
+	.timeline {
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		overflow-x: visible;
+		padding-bottom: 0;
+		max-width: 100vw;
+	}
+	.timeline-item {
+		width: 90vw;
+		max-width: 340px;
+		flex: 1 1 auto;
+	}
+}
+/* Blurred background for 1968 milestone - image fits box */
+.timeline-item-1968 {
+	position: relative;
+	overflow: hidden;
+}
+.timeline-1968-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/1.jpg');
+	background-size: cover; /* Ensures image covers the box */
+	background-position: center;
+	background-repeat: no-repeat;
+	/* Removed blur for clarity */
+	z-index: 0;
+}
+.timeline-item-1968 > *:not(.timeline-1968-bg) {
+	position: relative;
+	z-index: 1;
+}
+.timeline-item-2040 > .timeline-year,
+.timeline-item-2040 > section {
+	color: #fff;
+}
+/* Blurred background for 2040 milestone - image fits box */
+.timeline-item-2040 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2040-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/7.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2040 > *:not(.timeline-2040-bg) {
+	position: relative;
+	z-index: 1;
+}
+.timeline-item-2040 > .timeline-year,
+.timeline-item-2040 > section {
+	color: #fff;
+}
+
+/* Blurred background for 1985 milestone - image fits box */
+.timeline-item-1985 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-1985-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/4.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-1985 > *:not(.timeline-1985-bg) {
+	position: relative;
+	z-index: 1;
+}
+
+/* Blurred background for 2022 milestone - image fits box */
+.timeline-item-2022 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2022-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/5.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2022 > *:not(.timeline-2022-bg) {
+	position: relative;
+	z-index: 1;
+}
+
+/* Blurred background for 2030 milestone - image fits box */
+.timeline-item-2030 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2030-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/6.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2030 > *:not(.timeline-2030-bg) {
+	position: relative;
+	z-index: 1;
+}
+/* Blurred background for 1978 milestone - image fits box */
+.timeline-item-1978 {
+	position: relative;
+	overflow: hidden;
+}
+.timeline-1978-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('img/3.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	
+		z-index: 0;
+}
+.timeline-item-1978 > .timeline-year,
+.timeline-item-1978 > section {
+	position: relative;
+	z-index: 1;
+}
+/* Blurred background for 1971 milestone - image fits box */
+.timeline-item-1971 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-1971-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/4004Chip.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-1971 > *:not(.timeline-1971-bg) {
+	position: relative;
+	z-index: 1;
+}
+.timeline-item-1968, .timeline-item-1968 * {
+	color: #000 !important;
+}

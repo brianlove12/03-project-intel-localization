@@ -1,3 +1,15 @@
+/* Responsive header font size */
+header h1 {
+	font-size: clamp(2rem, 6vw, 3.5rem); /* Scales between 2rem and 3.5rem based on viewport width */
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	line-height: 1.1;
+}
+@media (max-width: 576px) {
+	header h1 {
+		font-size: 2rem;
+	}
+}
 /* Footer link hover effect */
 footer a:hover {
 	color: #93b2ed !important; /* Gold for high contrast */

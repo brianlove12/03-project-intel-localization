@@ -3,129 +3,325 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link href="bootstrap-icons.css" rel="stylesheet">
   <title>Intel: Sustainability Through The Ages</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main></main>
-    <!-- Header / Hero Section -->
-    <header>
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <h1>SUSTAINABILITY THROUGH THE AGES</h1>
-      <!-- Decorative divider using a semantic <hr> element -->
-      <hr class="header-divider" />
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
-    </header>
 
-    <!-- Timeline Section: Intel's Sustainability Goals -->
-    <section class="timeline-section">
-      <h2>Intel's Sustainability Timeline</h2>
-      <section class="timeline">
-        <!-- Timeline Item 1968 -->
-        <article class="timeline-item timeline-item-1968" tabindex="0">
-          <div class="timeline-1968-bg"></div>
-          <span class="timeline-year">1968</span>
-          <section class="timeline-content reveal-on-hover">
-            <h3>Intel Founded</h3>
-            <p>Intel Corporation is founded by Robert Noyce and Gordon Moore, marking the beginning of decades of innovation.</p>
-            <div class="fun-fact" hidden>Fun Fact: The name "Intel" comes from "Integrated Electronics"!</div>
-          </section>
-        </article>
-        <!-- Timeline Item 1971 -->
-        <article class="timeline-item timeline-item-1971" tabindex="0">
-          <div class="timeline-1971-bg"></div>
-          <span class="timeline-year">1971</span>
-          <section class="timeline-content reveal-on-hover">
-            <h3>First Microprocessor</h3>
-            <p>Intel introduces the 4004, the world's first commercial microprocessor, launching the microprocessor revolution.</p>
-            <div class="fun-fact" hidden>Fun Fact: The 4004 had just 2,300 transistors—modern chips have billions!</div>
-          </section>
-        </article>
-        <!-- Timeline Item 1978 -->
-        <article class="timeline-item timeline-item-1978" tabindex="0">
-          <div class="timeline-1978-bg"></div>
-          <span class="timeline-year">1978</span>
-          <section class="timeline-content reveal-on-hover">
-            <h3>8086 Processor</h3>
-            <p>Intel launches the 8086 processor, establishing the x86 architecture that powers countless computers today.</p>
-            <div class="fun-fact" hidden>Fun Fact: The x86 architecture is still used in most PCs today!</div>
-          </section>
-        </article>
-        <!-- Timeline Item 1985 -->
-        <article class="timeline-item timeline-item-1985" tabindex="0">
-          <div class="timeline-1985-bg"></div>
-          <span class="timeline-year">1985</span>
-          <section class="timeline-content reveal-on-hover">
-            <h3>386 Microprocessor</h3>
-            <p>Intel introduces the 386 microprocessor, bringing 32-bit computing and multitasking to personal computers.</p>
-            <div class="fun-fact" hidden>Fun Fact: The 386 was the first Intel chip to allow running multiple programs at once!</div>
-          </section>
-        </article>
-        <!-- Timeline Item 2022 -->
-        <article class="timeline-item timeline-item-2022" tabindex="0">
-          <div class="timeline-2022-bg"></div>
-          <span class="timeline-year">2022</span>
-          <section class="timeline-content reveal-on-hover">
-            <h3>100% Renewable Energy</h3>
-            <p>Intel achieved 100% renewable electricity use in its global operations.</p>
-            <div class="fun-fact" hidden>Fun Fact: Intel is one of the largest voluntary purchasers of green power in the U.S.!</div>
-          </section>
-        </article>
-        <!-- Timeline Item 2030 -->
-        <article class="timeline-item timeline-item-2030" tabindex="0">
-          <div class="timeline-2030-bg"></div>
-          <span class="timeline-year">2030</span>
-          <section class="timeline-content reveal-on-hover">
-            <h3>Net Positive Water</h3>
-            <p>Intel aims to achieve net positive water use by conserving more water than it consumes.</p>
-            <div class="fun-fact" hidden>Fun Fact: Intel restores billions of gallons of water to local watersheds each year!</div>
-          </section>
-        </article>
-        <!-- Timeline Item 2040 -->
-        <article class="timeline-item timeline-item-2040" tabindex="0">
-          <div class="timeline-2040-bg"></div>
-          <span class="timeline-year">2040</span>
-          <section class="timeline-content reveal-on-hover">
-            <h3>Net Zero Greenhouse Gas Emissions</h3>
-            <p>Intel is committed to reaching net zero greenhouse gas emissions in its global operations.</p>
-            <div class="fun-fact" hidden>Fun Fact: Intel aims to achieve net-zero greenhouse gas emissions by 2040!</div>
-          </section>
-        </article>
-      </section>
-      <p class="timeline-instructions">Scroll to view timeline | Hover over cards to learn more!</p>
+  <!-- Header / Hero Section -->
+  <header>
+    <img src="img/intel-header-logo.svg" alt="Intel Logo" />
+    <h1>SUSTAINABILITY THROUGH THE AGES</h1>
+    <hr class="header-divider" />
+    <p>
+      Explore Intel's journey through time, discovering how our commitment
+      to innovation has shaped a more sustainable future for technology 
+      and our planet.
+    </p>
+  </header>
+
+  <!-- Timeline Section: Intel's Sustainability Goals -->
+  <section class="timeline-section">
+    <h2>Intel's Sustainability Timeline</h2>
+    <section class="timeline">
+      <!-- Timeline Item 1968 -->
+      <article class="timeline-item timeline-item-1968" tabindex="0">
+        <div class="timeline-1968-bg"></div>
+        <span class="timeline-year">1968</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>Intel Founded</h3>
+          <p>Intel Corporation is founded by Robert Noyce and Gordon Moore, marking the beginning of decades of innovation.</p>
+          <div class="fun-fact" hidden>Fun Fact: The name "Intel" comes from "Integrated Electronics"!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 1971 -->
+      <article class="timeline-item timeline-item-1971" tabindex="0">
+        <div class="timeline-1971-bg"></div>
+        <span class="timeline-year">1971</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>First Microprocessor</h3>
+          <p>Intel introduces the 4004, the world's first commercial microprocessor, launching the microprocessor revolution.</p>
+          <div class="fun-fact" hidden>Fun Fact: The 4004 had just 2,300 transistors—modern chips have billions!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 1978 -->
+      <article class="timeline-item timeline-item-1978" tabindex="0">
+        <div class="timeline-1978-bg"></div>
+        <span class="timeline-year">1978</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>8086 Processor</h3>
+          <p>Intel launches the 8086 processor, establishing the x86 architecture that powers countless computers today.</p>
+          <div class="fun-fact" hidden>Fun Fact: The x86 architecture is still used in most PCs today!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 1985 -->
+      <article class="timeline-item timeline-item-1985" tabindex="0">
+        <div class="timeline-1985-bg"></div>
+        <span class="timeline-year">1985</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>386 Microprocessor</h3>
+          <p>Intel introduces the 386 microprocessor, bringing 32-bit computing and multitasking to personal computers.</p>
+          <div class="fun-fact" hidden>Fun Fact: The 386 was the first Intel chip to allow running multiple programs at once!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 2006 -->
+      <article class="timeline-item timeline-item-2006" tabindex="0">
+        <div class="timeline-2006-bg"></div>
+        <span class="timeline-year">2006</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>Peak GHG Emissions</h3>
+          <p>This year marks Intel's highest annual greenhouse gas emissions for operations.</p>
+          <div class="fun-fact" hidden>Fun Fact: Intel reduced its GGE by more than 75% from its 2006 peak through investments in renewable energy and efficiency!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 2020 -->
+      <article class="timeline-item timeline-item-2020" tabindex="0">
+        <div class="timeline-2020-bg"></div>
+        <span class="timeline-year">2020</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>RISE strategy</h3>
+          <p>
+            Intel launches its RISE strategy and 2030 goals, aiming to drive industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <div class="fun-fact" hidden>Fun Fact: RISE stands for Responsible, Inclusive, Sustainable, Enabling!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 2022 -->
+      <article class="timeline-item timeline-item-2022" tabindex="0">
+        <div class="timeline-2022-bg"></div>
+        <span class="timeline-year">2022</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>100% Renewable Energy</h3>
+          <p>Intel achieved 100% renewable electricity use in its global operations.</p>
+          <div class="fun-fact" hidden>Fun Fact: After 2006, Intel invested in renewable energy and efficiency, reducing its greenhouse gas emissions by more than 75%!</div>
+          <div class="fun-fact" hidden>Fun Fact: Intel is one of the largest voluntary purchasers of green power in the U.S.!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 2030 -->
+      <article class="timeline-item timeline-item-2030" tabindex="0">
+        <div class="timeline-2030-bg"></div>
+        <span class="timeline-year">2030</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>Net Positive Water</h3>
+          <p>Intel aims to achieve net positive water use by conserving more water than it consumes.</p>
+          <div class="fun-fact" hidden>Fun Fact: Intel restores billions of gallons of water to local watersheds each year!</div>
+        </section>
+      </article>
+      <!-- Timeline Item 2040 -->
+      <article class="timeline-item timeline-item-2040" tabindex="0">
+        <div class="timeline-2040-bg"></div>
+        <span class="timeline-year">2040</span>
+        <section class="timeline-content reveal-on-hover">
+          <h3>Net Zero Greenhouse Gas Emissions</h3>
+          <p>Intel is committed to reaching net zero greenhouse gas emissions in its global operations.</p>
+          <div class="fun-fact" hidden>Fun Fact: Intel aims to achieve net-zero greenhouse gas emissions by 2040!</div>
+        </section>
+      </article>
     </section>
-  </main>
-</main>
-<script>
-// Show fun fact after 2 seconds of hover/focus
-document.querySelectorAll('.timeline-item').forEach(function(card) {
-  let timer;
-  const funFact = card.querySelector('.fun-fact');
-  card.addEventListener('mouseenter', function() {
-    timer = setTimeout(function() {
-      if (funFact) funFact.hidden = false;
-    }, 2000);
+    <p class="timeline-instructions">Scroll to view timeline | Hover over cards to learn more!</p>
+  </section>
+
+
+  <!-- Timeline Cards Section -->
+  <section>
+    <!-- Card 1: 1968 -->
+    <div>
+      <h2>1968</h2>
+      <h3>Intel Founded</h3>
+      <img src="img/1.jpg" alt="Placeholder Image" />
+      <p>
+        Robert Noyce and Gordon Moore rename the newly formed company 
+        NM Electronics to Intel Corporation, laying the foundation for 
+        decades of technological innovation.
+      </p>
+    </div>
+
+    <!-- Card 2: 1971 -->
+    <div>
+      <h2>1971</h2>
+      <h3>First Microprocessor</h3>
+      <img src="img/2.jpg" alt="Placeholder Image" />
+      <p>
+        Intel debuts the 4004, the world's first commercial microprocessor, 
+        igniting the microprocessor revolution and propelling the future 
+        of computing devices.
+      </p>
+    </div>
+
+    <!-- Card 3: 1978 -->
+    <div>
+      <h2>1978</h2>
+      <h3>8086 Processor</h3>
+      <img src="img/3.jpg" alt="Placeholder Image" />
+      <p>
+        Launch of the 8086 processor, establishing the x86 architecture 
+        that drives countless PCs and servers in the modern era.
+      </p>
+    </div>
+
+    <!-- Card 4: 1985 -->
+    <div>
+      <h2>1985</h2>
+      <h3>386 Processor</h3>
+      <img src="img/4.jpg" alt="Placeholder Image" />
+      <p>
+        Intel introduces the 386 processor with 32-bit architecture, 
+        ushering in a new era of performance and multitasking for 
+        personal computers.
+      </p>
+    </div>
+
+    <!-- Card 5: 2006 -->
+    <div>
+      <h2>2006</h2>
+      <h3>Peak GHG Emissions</h3>
+      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <p>
+        This year marks Intel's highest annual greenhouse gas emissions 
+        for operations. Over subsequent years, Intel invests heavily in 
+        chemical abatement, renewable energy, and energy-efficient 
+        manufacturing to reverse this trend.
+      </p>
+    </div>
+
+    <!-- Card 6: 2020 -->
+    <div>
+      <h2>2020</h2>
+      <h3>RISE Strategy</h3>
+      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <p>
+        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
+        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
+        progress on climate action, water stewardship, and waste reduction.
+      </p>
+    </div>
+
+    <!-- Card 7: 2022 -->
+    <div>
+      <h2>2022</h2>
+      <h3>Net-Zero By 2040</h3>
+      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <p>
+        Intel announces its commitment to achieve net-zero greenhouse 
+        gas emissions (Scope 1 and 2) across its global operations 
+        by 2040, building on years of environmental initiatives.
+      </p>
+    </div>
+
+    <!-- Card 8: 2023 -->
+    <div>
+      <h2>2023</h2>
+      <h3>Renewable Electricity</h3>
+      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <p>
+        The company achieves 99% renewable electricity usage worldwide, 
+        helping to drastically lower carbon emissions and driving progress 
+        toward Intel's long-term sustainability goals.
+      </p>
+    </div>
+
+    <!-- Card 9: 2024 -->
+    <div>
+      <h2>2024</h2>
+      <h3>Sustainability Summit</h3>
+      <img src="https://placehold.co/250x100" alt="Placeholder Image" />
+      <p>
+        Intel hosts its first Sustainability Summit, uniting suppliers, 
+        government officials, and industry leaders to collaborate on 
+        next-generation sustainable semiconductor manufacturing.
+      </p>
+    </div>
+  </section>
+  <!-- 3-Column Content Section using Bootstrap grid, RTL -->
+<section class="container mt-5" dir="rtl">
+  <div class="row">
+    <!-- Column 1 -->
+    <div class="col-md-4 mb-4">
+  <h2 class="h5"><i class="bi bi-bar-chart-line column-heading-icon"></i> RISE Strategy</h2>
+      <p>
+        Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+        Intel sets ambitious 2030 goals, including driving industry-wide 
+        progress on climate action, water stewardship, and waste reduction.
+      </p>
+      <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+    </div>
+    <!-- Column 2 -->
+    <div class="col-md-4 mb-4">
+  <h2 class="h5"><i class="bi bi-shield-check column-heading-icon"></i> Commitment</h2>
+      <p>
+        In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+        (Scope 1 and 2) by 2040. This commitment builds on decades of 
+        environmental initiatives and partnerships across the semiconductor 
+        industry.
+      </p>
+      <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+    </div>
+    <!-- Column 3 -->
+    <div class="col-md-4 mb-4">
+  <h2 class="h5"><i class="bi bi-droplet-half column-heading-icon"></i> Water &amp; Waste</h2>
+      <p>
+        Intel conserves billions of gallons of water annually and 
+        collaborates with local communities to restore watersheds.
+        Intel also upcycles and recycles materials to reduce waste and 
+        advance a circular economy.
+      </p>
+      <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Newsletter section placed inside a full-width column for clarity -->
+    <div class="col-md-12">
+      <br>
+      <br>
+      <section>
+        <h2 class="newsletter-heading">Subscribe To Our Newsletter</h2>
+        <!-- Add form here -->
+      </section>
+      <br>  
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</section>
+<br>
+
+  <script>
+  // Show fun fact after 2 seconds of hover/focus
+  document.querySelectorAll('.timeline-item').forEach(function(card) {
+    let timer;
+    const funFact = card.querySelector('.fun-fact');
+    card.addEventListener('mouseenter', function() {
+      timer = setTimeout(function() {
+        if (funFact) funFact.hidden = false;
+      }, 2000);
+    });
+    card.addEventListener('mouseleave', function() {
+      clearTimeout(timer);
+      if (funFact) funFact.hidden = true;
+    });
+    card.addEventListener('focusin', function() {
+      timer = setTimeout(function() {
+        if (funFact) funFact.hidden = false;
+      }, 2000);
+    });
+    card.addEventListener('focusout', function() {
+      clearTimeout(timer);
+      if (funFact) funFact.hidden = true;
+    });
   });
-  card.addEventListener('mouseleave', function() {
-    clearTimeout(timer);
-    if (funFact) funFact.hidden = true;
-  });
-  card.addEventListener('focusin', function() {
-    timer = setTimeout(function() {
-      if (funFact) funFact.hidden = false;
-    }, 2000);
-  });
-  card.addEventListener('focusout', function() {
-    clearTimeout(timer);
-    if (funFact) funFact.hidden = true;
-  });
-});
+  </script>
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+

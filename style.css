@@ -1,13 +1,79 @@
+/* Stylish icons for column headings */
+.column-heading-icon {
+	font-size: 2rem; /* Make icons larger */
+	color: #0071c5;  /* Intel blue for brand consistency */
+	margin-inline-end: 0.5em; /* Space between icon and text, RTL-friendly */
+	vertical-align: middle;
+	filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15)); /* Subtle shadow */
+	transition: color 0.3s;
+}
+.column-heading-icon:hover {
+	color: #005fa3; /* Slightly darker on hover */
+}
+/* Left-align the newsletter heading */
+h2.newsletter-heading {
+	text-align: left;
+}
+/* Blurred background for 2020 milestone - image fits box */
+.timeline-item-2020 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2020-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/9.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2020 > *:not(.timeline-2020-bg) {
+	position: relative;
+	z-index: 1;
+}
+/* Blurred background for 2006 milestone - image fits box */
+.timeline-item-2006 {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+}
+.timeline-2006-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/8.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	z-index: 0;
+}
+.timeline-item-2006 > *:not(.timeline-2006-bg) {
+	position: relative;
+	z-index: 1;
+}
 .fun-fact {
 	margin-top: 1rem;
-	padding: 0.7rem 1rem;
+	padding: 0.7rem .5rem;
 	background: #c0c1c4;
 	color: #0b0c0e;
-	border-radius: 10px;
-	font-size: 0.98rem;
+	border-radius: 16px;
+	font-size: 0.9rem;
 	box-shadow: 0 2px 8px rgba(50,102,189,0.10);
 	transition: opacity 0.5s;
 	opacity: 1;
+	max-width: 250px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 .timeline-item-1968 .timeline-year {
 	color: #fff !important;
@@ -16,6 +82,8 @@
 .timeline-item:hover .timeline-1971-bg,
 .timeline-item:hover .timeline-1978-bg,
 .timeline-item:hover .timeline-1985-bg,
+.timeline-item:hover .timeline-2006-bg,
+.timeline-item:hover .timeline-2020-bg,
 .timeline-item:hover .timeline-2022-bg,
 .timeline-item:hover .timeline-2030-bg,
 .timeline-item:hover .timeline-2040-bg {

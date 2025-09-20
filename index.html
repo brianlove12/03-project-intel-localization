@@ -195,8 +195,10 @@
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header justify-content-between flex-row">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="modal-title" id="newsletterModalLabel">Thank You for Subscribing</h5>
+                <div id="newsletterModalHeaderLTR" class="w-100 d-flex flex-row justify-content-between align-items-center">
+                  <h5 class="modal-title" id="newsletterModalLabelLTR">Thank You for Subscribing</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
               </div>
               <div class="modal-body">
                 <p id="newsletterModalText" class="text-start">Your subscription to Intel's sustainability newsletter was successful</p>
@@ -208,19 +210,27 @@
           </div>
         </div>
         <script>
-          // Toggle modal text alignment based on RTL/LTR
+          // Toggle modal text alignment and header layout based on RTL/LTR
           function updateModalTextAlign() {
             const rtlLangs = ['ar', 'he', 'fa', 'ur', 'ps'];
             const lang = document.documentElement.lang || navigator.language || '';
             const shortLang = lang.split('-')[0];
             const modalText = document.getElementById('newsletterModalText');
+            const headerLTR = document.getElementById('newsletterModalHeaderLTR');
+            const headerRTL = document.getElementById('newsletterModalHeaderRTL');
+            const titleLTR = document.getElementById('newsletterModalLabelLTR');
+            const titleRTL = document.getElementById('newsletterModalLabelRTL');
             if (modalText) {
               if (rtlLangs.includes(shortLang)) {
                 modalText.classList.remove('text-start');
                 modalText.classList.add('text-end');
+                if (headerLTR) headerLTR.style.display = 'none';
+                if (headerRTL) headerRTL.style.display = 'flex';
               } else {
                 modalText.classList.remove('text-end');
                 modalText.classList.add('text-start');
+                if (headerLTR) headerLTR.style.display = 'flex';
+                if (headerRTL) headerRTL.style.display = 'none';
               }
             }
           }

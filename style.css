@@ -1,3 +1,10 @@
+/* Footer link hover effect */
+footer a:hover {
+	color: #93b2ed !important; /* Gold for high contrast */
+	text-decoration: underline;
+	transition: color 0.2s;
+}
+/* Stylish icons for column headings */
 /* Stylish icons for column headings */
 .column-heading-icon {
 	font-size: 2rem; /* Make icons larger */

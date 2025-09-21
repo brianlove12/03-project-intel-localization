@@ -1,3 +1,22 @@
+/* Make Learn More and Subscribe buttons Intel blue */
+.btn-primary {
+	background-color: #00aee7;
+	border-color: #00aee7;
+}
+.btn-primary:hover, .btn-primary:focus {
+	background-color: #008bb5;
+	border-color: #008bb5;
+}
+/* Intel light blue square icon for column headers */
+.intel-square-icon {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background: #00aee7;
+		/* No border-radius for perfect square */
+	margin-right: 8px;
+	vertical-align: middle;
+}
 /* Responsive header font size */
 header h1 {
 	font-size: clamp(2rem, 6vw, 3.5rem); /* Scales between 2rem and 3.5rem based on viewport width */
@@ -11,8 +30,8 @@ header h1 {
 	}
 }
 /* Footer link hover effect */
-footer a:hover {
-	color: #93b2ed !important; /* Gold for high contrast */
+footer .row a:hover {
+	color: #00aee7 !important;
 	text-decoration: underline;
 	transition: color 0.2s;
 }
